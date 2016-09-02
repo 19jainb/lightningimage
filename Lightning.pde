@@ -17,6 +17,8 @@ void setup()
 void draw()
 {
   
+ image(img,58,269,500,400);
+ 
   stroke(249,248,193);
   //stroke((int)(Math.random()*256));
   while (endX< 350) {
@@ -27,7 +29,6 @@ void draw()
     startY= endY;
    }
  
- image(img,58,269,500,400);
  //image(img, 50,285,50/2,25/2);
 
 
