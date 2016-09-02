@@ -1,14 +1,14 @@
-int startX = 0;
-int startY=150;
+int startX = 200;
+int startY=0;
 int endX = 0;
-int endY = 150;
+int endY = 40;
 PImage img;
 void setup()
 
 {
   background(0,0,0);
   size(600, 600);
-  strokeWeight(2); //default
+  strokeWeight(4); //default
   noLoop();
   //images must be in the "data" directory to load correctly 
   img= loadImage("cups.jpg.gif");
@@ -19,15 +19,15 @@ void draw()
   
   stroke(249,248,193);
   //stroke((int)(Math.random()*256));
-  while (endX< 600) {
-    endX= startX+ ((int)(Math.random()*9));
-    endY= startY+ ((int)(Math.random()*18)-9);
+  while (endX< 350) {
+    endX= startX+ ((int)(Math.random()*20));
+    endY= startY+ ((int)(Math.random()*90)-10);
     line(startX, startY, endX, endY);
     startX= endX;
     startY= endY;
    }
  
- image(img, 50,285);
+ image(img,58,269,500,400);
  //image(img, 50,285,50/2,25/2);
 
 
@@ -47,9 +47,9 @@ void draw()
 }
 void mousePressed()
 {
-startX = 0;
-startY=150;
+startX = 200;
+startY=0;
 endX = 0;
-endY = 150;
+endY = 40;
    redraw();
 }
